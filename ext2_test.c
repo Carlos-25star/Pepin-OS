@@ -7,6 +7,10 @@
 #include "screen.h"
 #include "mm.h"
 
+#ifndef NULL
+#define NULL ((void*)0)
+#endif
+
 /*
  * Test callback function for directory listing
  */

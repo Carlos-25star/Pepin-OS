@@ -88,6 +88,13 @@ int main(void)
     ide_init();
     print("kernel : IDE controller initialized\n");
     
+    /* Inicializar sistema de archivos Ext2 */
+    if (ext2_init() == 0) {
+        print("kernel : Ext2 filesystem ready\n");
+    } else {
+        print("kernel : WARNING - Ext2 filesystem not available\n");
+    }
+    
     /* Probar lectura/escritura IDE */
     char *buffer = (char *)kmalloc(512);
     char *msg = "Hello from Pepin OS!";

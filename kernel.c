@@ -38,35 +38,15 @@ void kmain(struct mb_partial_info *mbi)
     kattr = 0x0E;  /* amarillo sobre negro */
     
     /* Mensaje de bienvenida */
-    print("Grub example kernel is loaded...\n");
+    print("Pepin OS - Kernel loaded successfully!\n");
+    print("This is a test message from the kernel.\n");
+    print("Phase 1: Ext2 Filesystem Infrastructure\n");
+    print("Kernel is working - halting here for testing.\n");
     
-    /* Mostrar información de RAM detectada por GRUB */
-    if (mbi && (mbi->flags & 0x1)) {
-        print("RAM detected : ");
-        print_dec(mbi->low_mem);
-        print("k (lower), ");
-        print_dec(mbi->high_mem);
-        print("k (upper)\n");
+    /* Detener el sistema aquí para pruebas */
+    while (1) {
+        asm("hlt");
     }
-    
-    /* Inicializar IDT */
-    init_idt();
-    print("kernel : idt loaded\n");
-    
-    /* Inicializar PIC */
-    init_pic();
-    print("kernel : pic configured\n");
-    
-    /* Inicializar GDT y segmentos */
-    init_gdt();
-    print("kernel : gdt loaded\n");
-    
-    /* Inicializar el puntero de pila %esp */
-    asm("   movw $0x18, %ax \n \
-            movw %ax, %ss \n \
-            movl $0x20000, %esp");
-    
-    main();
 }
 
 int main(void)

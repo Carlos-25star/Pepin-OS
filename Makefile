@@ -1,6 +1,6 @@
-CC = gcc
+CC = i686-linux-gnu-gcc
 CFLAGS = -m32 -c -ffreestanding -fno-pic -fno-stack-protector -nostdlib -Wall
-LD = ld
+LD = i686-linux-gnu-ld
 # Cambio crítico: usar dirección 0x100000 para GRUB
 LDFLAGS = -m elf_i386 -Ttext=0x100000 --entry=_start
 NASM = nasm

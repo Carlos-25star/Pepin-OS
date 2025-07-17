@@ -90,14 +90,18 @@ int main(void)
     print("kernel : IDE controller initialized\n");
     
     /* Inicializar sistema de archivos Ext2 */
+    /*
     if (ext2_init() == 0) {
         print("kernel : Ext2 filesystem ready\n");
         
-        /* Probar funcionalidad Ext2 */
+        // Probar funcionalidad Ext2
         ext2_test();
     } else {
         print("kernel : WARNING - Ext2 filesystem not available\n");
     }
+    */
+    
+    print("kernel : Ext2 temporarily disabled for testing\n");
     
     /* Probar lectura/escritura IDE */
     char *buffer = (char *)kmalloc(512);

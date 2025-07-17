@@ -98,9 +98,9 @@ iso: kernel
 	grub-mkrescue -o pepin.iso iso
 	rm -rf iso
 
-# Probar con QEMU usando multiboot directo
-run-multiboot: kernel
-	qemu-system-i386 -kernel kernel
+# Probar con QEMU usando multiboot directo (con disco Ext2)
+run-multiboot: kernel ext2_disk.img
+	qemu-system-i386 -kernel kernel -hda ext2_disk.img
 
 # Probar con ISO
 run-iso: iso

@@ -92,6 +92,9 @@ int main(void)
     /* Inicializar sistema de archivos Ext2 */
     if (ext2_init() == 0) {
         print("kernel : Ext2 filesystem ready\n");
+        
+        /* Probar funcionalidad Ext2 */
+        ext2_test();
     } else {
         print("kernel : WARNING - Ext2 filesystem not available\n");
     }

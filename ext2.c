@@ -386,19 +386,3 @@ int ext2_list_dir(struct ext2_inode *dir_inode, void (*callback)(struct ext2_dir
     kfree(buffer);
     return 0;
 }
-
-/*
- * Función auxiliar para comparar strings (usada en find_file)
- */
-int memcmp(const void *s1, const void *s2, u32 n)
-{
-    const unsigned char *p1 = s1, *p2 = s2;
-    while (n-- > 0) {
-        if (*p1 != *p2) {
-            return *p1 - *p2;
-        }
-        p1++;
-        p2++;
-    }
-    return 0;
-}

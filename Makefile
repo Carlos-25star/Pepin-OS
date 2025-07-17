@@ -6,8 +6,8 @@ LDFLAGS = -m elf_i386 -Ttext=0x100000 --entry=_start
 NASM = nasm
 NASMFLAGS = -f elf32
 
-# Objetos actualizados - boot.o debe ir PRIMERO, agregado heap.o e ide.o
-OBJECTS = boot.o kernel.o screen.o gdt.o lib.o idt.o isr.o pic.o kbd.o interrupt.o task.o syscall.o mm.o process.o schedule.o sched.o heap.o ide.o
+# Objetos actualizados - boot.o debe ir PRIMERO, agregado heap.o, ide.o y ext2.o
+OBJECTS = boot.o kernel.o screen.o gdt.o lib.o idt.o isr.o pic.o kbd.o interrupt.o task.o syscall.o mm.o process.o schedule.o sched.o heap.o ide.o ext2.o
 
 all: kernel
 

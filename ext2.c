@@ -3,6 +3,10 @@
 #include "mm.h"
 #include "lib.h"
 
+#ifndef NULL
+#define NULL ((void*)0)
+#endif
+
 /* Variable global del sistema de archivos */
 struct ext2_fs ext2_fs;
 

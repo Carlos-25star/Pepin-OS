@@ -73,6 +73,10 @@ ide.o: ide.c
 ext2.o: ext2.c
 	$(CC) $(CFLAGS) ext2.c
 
+# Nueva regla para ext2_test.o
+ext2_test.o: ext2_test.c
+	$(CC) $(CFLAGS) ext2_test.c
+
 interrupt.o: interrupt.asm
 	$(NASM) $(NASMFLAGS) interrupt.asm
 

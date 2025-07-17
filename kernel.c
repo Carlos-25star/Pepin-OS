@@ -9,6 +9,7 @@
 #include "process.h"
 #include "ide.h"  // Agregado para soporte IDE
 #include "ext2.h" // Agregado para soporte Ext2
+#include "ext2_test.h" // Test para Ext2
 
 void init_pic(void);
 int main(void);  // Declaración de la función main

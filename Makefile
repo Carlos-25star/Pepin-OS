@@ -69,6 +69,10 @@ heap.o: heap.c
 ide.o: ide.c
 	$(CC) $(CFLAGS) ide.c
 
+# Nueva regla para ext2.o
+ext2.o: ext2.c
+	$(CC) $(CFLAGS) ext2.c
+
 interrupt.o: interrupt.asm
 	$(NASM) $(NASMFLAGS) interrupt.asm
 

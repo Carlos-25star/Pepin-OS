@@ -72,10 +72,12 @@ void kmain(struct mb_partial_info *mbi)
 int main(void)
 {
     /* Inicializar gestión de memoria (paginación) */
+    print("kernel : about to initialize memory management\n");
+    /*
     init_mm();
     print("kernel : mm initialized\n");
     
-    /* Inicializar tareas y TSS */
+    // Inicializar tareas y TSS
     init_task();
     print("kernel : task initialized\n");
     
@@ -84,6 +86,9 @@ int main(void)
     init_page_heap();
     
     print("kernel : memory systems initialized\n");    
+    */
+    
+    print("kernel : memory management disabled for testing\n");
     
     /* Inicializar controlador IDE */
     ide_init();

@@ -113,6 +113,7 @@ int main(void)
     print("kernel : Ext2 temporarily disabled for testing\n");
     
     /* Probar lectura/escritura IDE */
+    /*
     char *buffer = (char *)kmalloc(512);
     char *msg = "Hello from Pepin OS!";
     
@@ -155,6 +156,9 @@ int main(void)
     } else {
         print("IDE    : Failed to allocate buffer\n");
     }
+    */
+    
+    print("kernel : IDE testing disabled for testing\n");
     
     kattr = 0x47;  /* texto blanco sobre fondo rojo */
     print("kernel : allowing interrupt\n");

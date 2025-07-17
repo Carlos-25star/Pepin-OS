@@ -91,8 +91,12 @@ int main(void)
     print("kernel : memory management disabled for testing\n");
     
     /* Inicializar controlador IDE */
+    /*
     ide_init();
     print("kernel : IDE controller initialized\n");
+    */
+    
+    print("kernel : IDE disabled for testing\n");
     
     /* Inicializar sistema de archivos Ext2 */
     /*

@@ -4,6 +4,7 @@
  */
 
 #include "ext2.h"
+#include "ext2_test.h"
 #include "screen.h"
 #include "mm.h"
 
